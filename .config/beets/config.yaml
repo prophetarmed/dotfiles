@@ -1,0 +1,36 @@
+directory: ~/Music
+library: ~/Music/beets.blb
+
+plugins: discogs fetchart lyrics inline edit embedart
+
+threaded: yes
+ui:
+  color: yes
+
+import:
+  write: yes
+  copy: no
+  move: yes
+  autotag: yes
+  bell: yes
+  log: ~/.beet.log
+
+per_disc_numbering: yes
+
+embedart:
+  auto: yes
+
+fetchart:
+  auto: yes
+  sources: coverart itunes filesystem amazon albumart fanarttv
+
+item_fields:
+  multidisc: 1 if disctotal > 1 else 0
+
+aunique:
+  keys: albumartist album
+  disambiguators: albumtype catalognum year label albumdisambig releasegroupdisambig
+  bracket: '[]'
+
+paths:
+  default: $albumartist/($original_year) $album%aunique{}/%if{$isMultidisc,$disc-}$track - $title
