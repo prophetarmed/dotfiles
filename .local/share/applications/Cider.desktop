@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Cider
+Comment=Apple Music client
+Exec=~/.local/bin/Cider.AppImage
+Terminal=false
+Type=Application
+Categories=Multimedia;
+MimeType=x-scheme-handler/cider2;
