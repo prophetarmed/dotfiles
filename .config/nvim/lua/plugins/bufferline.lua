@@ -1,8 +1,8 @@
 return {
 	{
 		"akinsho/bufferline.nvim",
-		dependencies = 'nvim-tree/nvim-web-devicons',
-		config = function ()
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
 			require("bufferline").setup()
 
 			local opts = { noremap = true, silent = true }
@@ -18,6 +18,6 @@ return {
 			vim.keymap.set("n", "<A-0>", "<Cmd>BufferLineGoToBuffer 10<CR>", opts)
 			vim.keymap.set("n", "<A-`>", "<Cmd>BufferLineGoToBuffer -1<CR>", opts)
 			vim.keymap.set("n", "<A-w>", "<Cmd>bd<CR>", opts)
-		end
-	}
+		end,
+	},
 }
