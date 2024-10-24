@@ -9,6 +9,17 @@ return {
 		},
 		config = function()
 			local servers = {
+				gopls = {
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+							gofumpt = true,
+						},
+					},
+				},
 				pyright = {},
 				rust_analyzer = {},
 				ts_ls = {},
